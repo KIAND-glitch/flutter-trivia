@@ -1,0 +1,1 @@
+ /Users/kiandsouza/Desktop/2023/flutter-trivia/.dart_tool/flutter_build/fde69c139bba2155fdfd9411d0623a0e/native_assets.yaml: 
