@@ -4,8 +4,13 @@ import 'package:flutter/material.dart';
 class Answer extends StatelessWidget {
   final VoidCallback selectHandler;
   final String answerText;
+  final bool highlight;
 
-  Answer(this.selectHandler, this.answerText);
+  Answer({
+    required this.selectHandler,
+    required this.answerText,
+    this.highlight = false, // Default value is false
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +19,13 @@ class Answer extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: ElevatedButton(
         onPressed: selectHandler,
-        child: Text(answerText),
+        style: ElevatedButton.styleFrom(
+          primary: highlight ? Colors.green : null,
+        ),
+        child: Text(
+          answerText,
+          style: TextStyle(color: highlight ? Colors.white : null),
+        ),
       ),
     );
   }
